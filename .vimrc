@@ -100,11 +100,6 @@ nmap  :setlocal spell spelllang=en_en<cr>
 au BufWinLeave ?* mkview
 au BufWinEnter ?* silent loadview
 
-autocmd VimEnter * NERDTree
-autocmd BufEnter * NERDTreeMirror
-let NERDTreeIgnore=['\.o$', '\~$']
-
-autocmd VimEnter * wincmd w
 set encoding=utf-8
 
 "highlight OverLength ctermbg=red ctermfg=white guibg=#592929
@@ -170,3 +165,9 @@ let g:syntastic_enable_signs=1
 " MatchIt
 runtime macros/matchit.vim
 
+" NERDTree
+autocmd VimEnter * NERDTree
+autocmd BufEnter * NERDTreeMirror
+let NERDTreeIgnore=['\.o$', '\~$']
+autocmd VimEnter * wincmd w
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
