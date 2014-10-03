@@ -154,6 +154,11 @@ cmap w!! w !sudo tee % >/dev/null
 "map <Up> <Nop>
 "map <Down> <Nop>
 
+augroup reload_vimrc " {
+    autocmd!
+    autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup END " }
+
 " syntastic
 let g:syntastic_enable_perl_checker = 1
 let g:syntastic_perl_checkers = ['perl', 'podchecker', 'perlcritic']
