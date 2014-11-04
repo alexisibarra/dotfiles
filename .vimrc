@@ -28,6 +28,7 @@ Bundle 'bling/vim-airline'
 Plugin 'SirVer/ultisnips' " Track the engine.
 Plugin 'honza/vim-snippets' " Snippets 
 Plugin 'majutsushi/tagbar'
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -55,7 +56,6 @@ autocmd BufReadPost *
 set autoindent " Indent automatically depending on filetype
 set cursorline " Linea horizontal para el cursor"
 set hls " Higlhight search
-set relativenumber " set line numbers relative to cursor position
 set ruler " Mostrar siempre la linea actual
 set scrolloff=3
 set sw=2 " sw -> espacios de la indentacion
@@ -240,3 +240,6 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
+
+" NumberToggle
+let g:NumberToggleTrigger="<F3>"
