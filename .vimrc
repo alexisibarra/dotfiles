@@ -16,16 +16,24 @@ Bundle 'yegappan/mru'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'vim-scripts/perl-support.vim'
 Bundle 'scrooloose/syntastic'
-Bundle 'vim-scripts/taglist.vim'
+"Bundle 'vim-scripts/taglist.vim'
 Bundle 'tomtom/tlib_vim'
 Bundle 'marcweber/vim-addon-mw-utils'
 Bundle 'tpope/vim-repeat'
 Bundle 'garbas/vim-snipmate'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'burnettk/vim-angular'
+Bundle 'bling/vim-airline'
+Plugin 'SirVer/ultisnips' " Track the engine.
+Plugin 'honza/vim-snippets' " Snippets 
+Plugin 'majutsushi/tagbar'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+set t_Co=256
+
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 
@@ -113,9 +121,11 @@ endif
 
 "Habilita los plugins
 filetype plugin on
-let Tlist_Use_Right_Window   = 1
-let Tlist_WinWidth = 51
-nnoremap <F2> :TlistToggle<CR>
+"let Tlist_Use_Right_Window   = 1
+"let Tlist_WinWidth = 51
+"nnoremap <F2> :TlistToggle<CR>
+nnoremap <F2> :TagbarToggle<CR>
+
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
@@ -154,6 +164,16 @@ augroup reload_vimrc " {
     autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END " }
 
+" Tabs
+nnoremap <C-b>  :tabprevious<CR>
+inoremap <C-b>  <Esc>:tabprevious<CR>i
+nnoremap <C-n>  :tabnext<CR>
+inoremap <C-n>  <Esc>:tabnext<CR>i
+nnoremap <C-t>  :tabnew<CR>
+inoremap <C-t>  <Esc>:tabnew<CR>i
+nnoremap <C-k>  :tabclose<CR>
+inoremap <C-k>  <Esc>:tabclose<CR>i
+
 " syntastic
 let g:syntastic_enable_perl_checker = 1
 let g:syntastic_perl_checkers = ['perl', 'podchecker', 'perlcritic']
@@ -161,7 +181,20 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_disabled_filetypes=['html']
 let g:syntastic_enable_signs=1
 
+let g:syntastic_html_tidy_ignore_errors = [
+    \"trimming empty <i>",
+    \"trimming empty <span>",
+    \"trimming empty <p>",
+    \"*proprietary attribute*",
+    \"proprietary attribute \"role\"",
+    \"proprietary attribute \"hidden\"",
+    \"<html> proprietary attribute \"class\"",
+\]
+
 " CTRLP
+let g:ctrlp_working_path_mode = 'ra'
+set wildignore+=*/.git/*,*/tmp/*,*.so,*.swp,*.zip  
+
 " MatchIt
 runtime macros/matchit.vim
 
@@ -171,3 +204,39 @@ autocmd BufEnter * NERDTreeMirror
 let NERDTreeIgnore=['\.o$', '\~$']
 autocmd VimEnter * wincmd w
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" indend / deindent after selecting the text with (⇧ v), (.) to repeat.
+vnoremap <Tab> >
+vnoremap <S-Tab> <
+
+" Vim-Airline
+let g:airline_theme='wombat'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" Ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
