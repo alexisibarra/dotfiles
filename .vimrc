@@ -35,6 +35,7 @@ Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'mhinz/vim-startify'
 Plugin 'Raimondi/delimitMate'
 Plugin 'godlygeek/tabular'
+Plugin 'Lokaltog/vim-easymotion'
 
 call vundle#end()             " required
 filetype plugin indent on     " required
@@ -57,14 +58,15 @@ set wildmenu
 set expandtab     " Reemplazar tabs con espacios
 set smarttab
 set tabstop=2
+set rnu
 
 " Busqueda
-set hls is        " highlight search, incsearch
-set ic            " ignore case en las busquedas
+set hls is            " highlight search, incsearch
+set ic                " ignore case en las busquedas
 
 set encoding=utf-8
-set mouse=a       " Habilitar/Deshabilitar uso de ratón
-set showcmd       " Always display an incomplete command in the wildmenu
+set mouse=a           " Habilitar/Deshabilitar uso de ratón
+set showcmd           " Always display an incomplete command in the wildmenu
 set textwidth=80
 set whichwrap=<,>,[,] " Extiende los movimientos con teclas en modo normal y de inserción
 
@@ -77,13 +79,13 @@ set whichwrap=<,>,[,] " Extiende los movimientos con teclas en modo normal y de 
 nmap  :setlocal spell spelllang=es_es<cr>
 nmap  :setlocal spell spelllang=en_en<cr>
 
-set history=1000     " remember more commands and search history
+set history=1000                         " remember more commands and search history
 set undolevels=1000
 
 set wildignore=*.swp,*.bak,*.pyc,*.class
-set title        " change the terminal's title
-set visualbell       " don't beep
-set noerrorbells     " don't beep
+set title                                " change the terminal's title
+set visualbell                           " don't beep
+set noerrorbells                         " don't beep
 
 set nobackup
 set noswapfile
