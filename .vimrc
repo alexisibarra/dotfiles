@@ -110,14 +110,8 @@ au BufWinEnter ?* silent loadview
 
 set encoding=utf-8
 
-"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-"match OverLength /\%81v.\+/
-
-if exists('+colorcolumn')
-  set colorcolumn=80
-else
-  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
-endif
+let &colorcolumn=join(range(81,999),",")
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
 
 "Habilita los plugins
 filetype plugin on
@@ -243,3 +237,4 @@ let g:UltiSnipsEditSplit="vertical"
 
 " NumberToggle
 let g:NumberToggleTrigger="<F3>"
+
