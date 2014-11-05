@@ -29,6 +29,7 @@ Plugin 'SirVer/ultisnips' " Track the engine.
 Plugin 'honza/vim-snippets' " Snippets 
 Plugin 'majutsushi/tagbar'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+Plugin 'mhinz/vim-startify'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -237,4 +238,3 @@ let g:UltiSnipsEditSplit="vertical"
 
 " NumberToggle
 let g:NumberToggleTrigger="<F3>"
-
