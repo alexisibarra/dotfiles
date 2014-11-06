@@ -7,3 +7,5 @@
 	co = checkout
 	st = status
 	cm = commit
+[color]
+	ui = auto
