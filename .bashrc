@@ -104,3 +104,13 @@ fi
 
 #Enlace para Rails
 export PATH=$PATH:/var/lib/gems/1.8/bin/
+
+function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
+
+
+if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+        export TERM='xterm-256color'
+else
+        export TERM='xterm-color'
+fi
+
