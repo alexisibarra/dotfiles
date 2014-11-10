@@ -57,7 +57,7 @@ set wildmenu
 " Tabulacion
 set expandtab     " Reemplazar tabs con espacios
 set smarttab
-set tabstop=2
+set tabstop=4
 set rnu
 
 " Busqueda
@@ -178,6 +178,7 @@ let g:syntastic_perl_checkers = ['perl', 'podchecker', 'perlcritic']
 let g:syntastic_auto_loc_list=1
 let g:syntastic_disabled_filetypes=['html']
 let g:syntastic_enable_signs=1
+let g:syntastic_aggregate_errors = 1
 
 let g:syntastic_html_tidy_ignore_errors = [
     \"trimming empty <i>",
@@ -241,3 +242,6 @@ let g:NumberToggleTrigger="<F3>"
 
 """ Tagbar
 nnoremap <F2> :TagbarToggle<CR>
+
+""" Startify
+autocmd User Startified set buftype=
