@@ -36,6 +36,9 @@ Plugin 'mhinz/vim-startify'
 Plugin 'Raimondi/delimitMate'
 Plugin 'godlygeek/tabular'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-endwise'
 
 call vundle#end()             " required
 filetype plugin indent on     " required
@@ -153,12 +156,17 @@ nmap :WQ :wq
 
 nnoremap ; :
 
+map <C-h> :%s/
+map <C-A> GVgg
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                  Appearance
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 syntax on
 set t_Co=256 " 256 colors in terminal
+
+set background=dark
 
 if exists('+colorcolumn')
   let &colorcolumn=join(range(80,500),",")
@@ -191,9 +199,9 @@ let g:syntastic_html_tidy_ignore_errors = [
 \]
 
 """ CTRLP
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-let g:ctrlp_working_path_mode = 'ra'
-set wildignore+=*/.git/*,*/tmp/*,*.so,*.swp,*.zip  
+"set runtimepath^=~/.vim/bundle/ctrlp.vim
+"let g:ctrlp_working_path_mode = 'ra'
+"set wildignore+=*/.git/*,*/tmp/*,*.so,*.swp,*.zip  
 
 """ MatchIt
 runtime macros/matchit.vim
