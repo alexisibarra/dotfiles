@@ -39,6 +39,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-endwise'
+Plugin 'edkolev/promptline.vim'
 
 call vundle#end()             " required
 filetype plugin indent on     " required
@@ -253,3 +254,19 @@ nnoremap <F2> :TagbarToggle<CR>
 
 """ Startify
 autocmd User Startified set buftype=
+
+""" promptline
+"let g:promptline_symbols = {
+    "\ 'left'       : '',
+    "\ 'left_alt'   : '▶',
+    "\ 'dir_sep'    : '/',
+    "\ 'truncation' : '...',
+    "\ 'vcs_branch' : '',
+    "\ 'space'      : ' '}
+
+"let g:promptline_preset = {
+        "\'a' : [ promptline#slices#host() ],
+        "\'b' : [ promptline#slices#user() ],
+        "\'c' : [ promptline#slices#cwd() ],
+        "\'y' : [ promptline#slices#vcs_branch() ],
+        "\'warn' : [ promptline#slices#last_exit_code() ]}
