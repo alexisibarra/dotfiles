@@ -9,7 +9,10 @@
 		"Emmet",
 		"Git",
 		"GitGutter",
+		"JSHint",
+		"JSHint Gutter",
 		"Markdown Preview",
-		"Package Control"
+		"Package Control",
+		"SideBarEnhancements"
 	]
 }
