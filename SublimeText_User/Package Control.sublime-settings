@@ -5,15 +5,24 @@
 	"installed_packages":
 	[
 		"Alignment",
+		"All Autocomplete",
+		"AutoFileName",
 		"Cheat Sheets",
 		"Dictionaries",
 		"Emmet",
 		"Git",
 		"GitGutter",
+		"Glue",
 		"JSHint",
 		"JSHint Gutter",
 		"Markdown Preview",
+		"MarkdownEditing",
 		"Package Control",
-		"SideBarEnhancements"
+		"PlainTasks",
+		"Predawn",
+		"Rails Developer Snippets",
+		"Ruby on Rails snippets",
+		"SideBarEnhancements",
+		"Theme - Soda"
 	]
 }
