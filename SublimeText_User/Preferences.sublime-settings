@@ -28,12 +28,13 @@
 		"*.db",
 		"*.sublime-workspace",
 		"*.aux",
-		"*.toc"
+		"*.toc",
+		"*.pdf"
 	],
-	"font_size": 10,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Vintage",
+		"Markdown"
 	],
 	"rulers":
 	[
