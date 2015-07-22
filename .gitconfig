@@ -2,10 +2,12 @@
 	name = Alexis Ibarra
 	email = ar.ibarrasalas@gmail.com
 [core]
-	editor = vim
+	editor = subl
 [alias]
 	co = checkout
 	st = status
-	cm = commit
+  cm = commit
+  b  = branch
+	ba = branch -a
 [color]
 	ui = auto
