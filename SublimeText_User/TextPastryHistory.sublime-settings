@@ -27,16 +27,140 @@
 			},
 			"key": "08604ba107193cd6120194bef4522bd1",
 			"label": "range 1 60"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"text": "\\38",
+					"threshold": 3
+				},
+				"command": "text_pastry_insert_text",
+				"text": "\\38"
+			},
+			"key": "6497c941c24d3717134ef5e4ef7b8977",
+			"label": "\\38"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"text": "question"
+				},
+				"command": "text_pastry_auto_step",
+				"text": "as question"
+			},
+			"key": "8bad0cb3b0893a9020cba7030d464a43",
+			"label": "as question"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"clipboard": true
+				},
+				"command": "text_pastry_insert_text",
+				"text": "\\p"
+			},
+			"key": "ceb8141b2b1d05fb9539bc1381b58745",
+			"label": "\\p"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"text": "question\\i",
+					"threshold": 3
+				},
+				"command": "text_pastry_insert_text",
+				"text": "question\\i"
+			},
+			"key": "89daced398c5c3422274ef045af19d02",
+			"label": "question\\i"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"text": "\\1",
+					"threshold": 3
+				},
+				"command": "text_pastry_insert_text",
+				"text": "\\1"
+			},
+			"key": "b5101eb6e685091719013d1a75756a53",
+			"label": "\\1"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"text": "question \\1",
+					"threshold": 3
+				},
+				"command": "text_pastry_insert_text",
+				"text": "question \\1"
+			},
+			"key": "337b98d8edb42002fd712948473d7f73",
+			"label": "question \\1"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"text": "question\\1",
+					"threshold": 3
+				},
+				"command": "text_pastry_insert_text",
+				"text": "question\\1"
+			},
+			"key": "5647409ac6c58b32e002b3a431210afb",
+			"label": "question\\1"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"text": "question1",
+					"threshold": 3
+				},
+				"command": "text_pastry_insert_text",
+				"text": "question1"
+			},
+			"key": "c31248e78aced0c36320b2f13a8a7891",
+			"label": "question1"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"text": "question1 {(1..4).to_a.sample}",
+					"threshold": 3
+				},
+				"command": "text_pastry_insert_text",
+				"text": "question1 {(1..4).to_a.sample}"
+			},
+			"key": "3af459b300b37eba398c905c1b62c39a",
+			"label": "question1 {(1..4).to_a.sample}"
 		}
 	],
 	"last_command":
 	{
 		"args":
 		{
-			"start": "1",
-			"stop": "60"
+			"text": "question1 {(1..4).to_a.sample}",
+			"threshold": 3
 		},
-		"command": "text_pastry_range",
-		"text": "range 1 60"
+		"command": "text_pastry_insert_text",
+		"text": "question1 {(1..4).to_a.sample}"
 	}
 }
