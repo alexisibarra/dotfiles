@@ -1,8 +1,9 @@
 [user]
 	name = Alexis Ibarra
 	email = ar.ibarrasalas@gmail.com
+	username = alexisibarra
 [core]
-	editor = subl
+	editor = vim
 [alias]
 	co = checkout
 	st = status

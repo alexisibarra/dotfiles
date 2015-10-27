@@ -151,16 +151,30 @@
 			},
 			"key": "3af459b300b37eba398c905c1b62c39a",
 			"label": "question1 {(1..4).to_a.sample}"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"text": "settings.py",
+					"threshold": 3
+				},
+				"command": "text_pastry_insert_text",
+				"text": "settings.py"
+			},
+			"key": "bdf3ecebd8379ca98cc89e545fc90899",
+			"label": "settings.py"
 		}
 	],
 	"last_command":
 	{
 		"args":
 		{
-			"text": "question1 {(1..4).to_a.sample}",
+			"text": "settings.py",
 			"threshold": 3
 		},
 		"command": "text_pastry_insert_text",
-		"text": "question1 {(1..4).to_a.sample}"
+		"text": "settings.py"
 	}
 }
