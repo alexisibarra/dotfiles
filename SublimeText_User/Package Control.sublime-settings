@@ -16,12 +16,13 @@
 		"Emmet",
 		"Git",
 		"GitGutter",
-		"Glue",
 		"Jade",
 		"JSHint",
 		"JSHint Gutter",
 		"Markdown Preview",
 		"MarkdownEditing",
+		"Material Theme",
+		"Material Theme - Appbar",
 		"ModernPerl",
 		"Package Control",
 		"PlainTasks",
@@ -33,9 +34,9 @@
 		"Ruby Slim",
 		"SideBarEnhancements",
 		"Stylus",
+		"SublimeLinter",
 		"Syntax Highlighting for Sass",
 		"Text Pastry",
-		"Theme - Soda",
-		"WakaTime"
+		"Theme - Soda"
 	]
 }
