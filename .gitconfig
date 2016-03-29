@@ -12,3 +12,5 @@
 	ba = branch -a
 [color]
 	ui = auto
+[push]
+	default = simple
