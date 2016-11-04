@@ -49,7 +49,10 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-source ~/bin/git-prompt.sh
+source /usr/local/etc/bash_completion.d/git-prompt.sh
+source /usr/local/etc/bash_completion.d/git-completion.bash
+source ~/bin/git-flow-completion/git-flow-completion.bash
+GIT_PS1_SHOWDIRTYSTATE=true
 
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(__git_ps1 " (%s)")\$ '
