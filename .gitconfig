@@ -1,16 +1,29 @@
+[core]
+	excludesfile = /Users/alexis/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
 [user]
-	name = Alexis Ibarra
-	email = ar.ibarrasalas@gmail.com
-	username = alexisibarra
+  name = Alexis Ibarra
+  email = ar.ibarrasalas@gmail.com
+  username = alexisibarra
 [core]
 	editor = vim
 [alias]
-	co = checkout
-	st = status
+  co = checkout
+  st = status
   cm = commit
   b  = branch
-	ba = branch -a
+  ba = branch -a
 [color]
-	ui = auto
+  ui = auto
 [push]
-	default = simple
+  default = simple
+
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
