@@ -103,9 +103,9 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
-fi
+# if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+#     . /etc/bash_completion
+# fi
 
 #Enlace para Rails
 export PATH=$PATH:/var/lib/gems/1.8/bin/
@@ -158,4 +158,5 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-export PATH="/home/alexis/Android/Sdk/tools/:$PATH"
+export PATH="/usr/local/mysql/bin:$PATH"
+# export PATH="/home/alexis/Android/Sdk/tools/:$PATH"
