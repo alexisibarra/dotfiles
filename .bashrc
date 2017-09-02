@@ -49,9 +49,12 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-source /usr/local/etc/bash_completion.d/git-prompt.sh
-source /usr/local/etc/bash_completion.d/git-completion.bash
+source /etc/bash_completion.d/git-prompt
 source ~/bin/git-flow-completion/git-flow-completion.bash
+
+if [ -f ~/bin/.git-completion.bash ]; then
+  . ~/bin/.git-completion.bash
+fi
 GIT_PS1_SHOWDIRTYSTATE=true
 
 if [ "$color_prompt" = yes ]; then
