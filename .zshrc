@@ -85,4 +85,7 @@ export LANG=en_US.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias apt-install = "sudo apt-get install" 
+alias zshconfig="vim ~/.zshrc" 
+
 function mcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
