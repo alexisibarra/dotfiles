@@ -51,7 +51,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-flow history)
+plugins=(git git-flow history extract)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -85,7 +85,7 @@ export LANG=en_US.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias apt-install = "sudo apt-get install" 
+alias apt-install="sudo apt-get install" 
 alias zshconfig="vim ~/.zshrc" 
 
 function mcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
