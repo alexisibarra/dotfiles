@@ -85,14 +85,16 @@ export LANG=en_US.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias apt-install="sudo apt-get install" 
-alias zshconfig="vim ~/.zshrc" 
+alias apt-install="sudo apt-get install"
+alias zshconfig="vim ~/.zshrc"
 
 function mcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
 # NPM setup
 
 NPM_PACKAGES="${HOME}/.npm-packages"
+
+NODE_PATH=$NODE_PATH:/home/alexis/.npm-packages/lib/node_modules
 
 PATH="$NPM_PACKAGES/bin:$PATH"
 
@@ -103,3 +105,4 @@ export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$HOME/.local/bin
