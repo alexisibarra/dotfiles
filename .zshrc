@@ -2,7 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:~/.config/composer/vendor/bin/:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/alexis/.oh-my-zsh
+export ZSH=/Users/alexis/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -51,7 +51,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-flow history extract npm)
+plugins=(git git-completion git-flow history extract npm tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -93,6 +93,7 @@ function mcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 # NPM setup
 
 NPM_PACKAGES="${HOME}/.npm-packages"
+NPM_CONFIG_PREFIX=~/.npm-packages
 
 NODE_PATH=$NODE_PATH:/home/alexis/.npm-packages/lib/node_modules
 
@@ -102,7 +103,14 @@ PATH="$NPM_PACKAGES/bin:$PATH"
 unset MANPATH # delete if you already modified MANPATH elsewhere in your config
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
-export ANDROID_HOME=$HOME/Android/Sdk
+# export ANDROID_HOME=$HOME/Android/Sdk
+# export PATH=$PATH:$HOME/.local/bin
+
+export ANDROID_HOME=/Users/$USER/Library/Android/sdk
+
+export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:$HOME/.local/bin
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
