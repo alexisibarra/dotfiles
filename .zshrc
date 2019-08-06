@@ -51,7 +51,7 @@ ZSH_THEME="cobalt2"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-completion git-flow history extract npm docker)
+plugins=(git git-flow history extract npm docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -86,6 +86,8 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 alias apti="sudo apt install"
 alias zshconfig="vim ~/.zshrc"
+alias apagar="sudo shutdown -h now"
+alias reiniciar="sudo shutdown -r now"
 
 function mcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
