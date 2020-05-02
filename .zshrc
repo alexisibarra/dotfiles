@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:~/.config/composer/vendor/bin/:$PATH
+export PATH=$HOME/bin:/usr/local/bin:~/.config/composer/vendor/bin/:~/.local/bin/:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
@@ -88,6 +88,7 @@ alias apti="sudo apt install"
 alias zshconfig="vim ~/.zshrc"
 alias apagar="sudo shutdown -h now"
 alias reiniciar="sudo shutdown -r now"
+alias python=python3
 
 function mcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
